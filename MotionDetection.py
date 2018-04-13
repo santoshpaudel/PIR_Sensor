@@ -2,9 +2,9 @@ import time
 import serial
 import smtplib
 
-TO = 'supreme.paudel@gmail.com'
-GMAIL_USER = 'aashma.acharya9950@gmail.com'
-GMAIL_PASS = 'villanovagraduate'
+TO = 'GMAIL_TO'
+GMAIL_USER = 'GMAIL_FROM'
+GMAIL_PASS = 'PASSWORD'
 
 SUBJECT = 'Intrusion Detected!!'
 TEXT = 'Someone is in your house. Make sure this is not an intrusion.'
