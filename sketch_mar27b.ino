@@ -24,13 +24,10 @@ void loop() {
     digitalWrite(LED, HIGH);
     if (now > (lastSend + minSecsBetweenEmails * 1000l))
     {
-      Serial.println("MOVEMENT");
+      Serial.println("MOVEMENT DETECTED");
       lastSend = now;
     }
-    else
-    {
-      Serial.println("Wait for few seconds");
-    }
+    
   }
   
  
