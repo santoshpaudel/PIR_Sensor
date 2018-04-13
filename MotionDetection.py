@@ -6,8 +6,8 @@ TO = 'supreme.paudel@gmail.com'
 GMAIL_USER = 'aashma.acharya9950@gmail.com'
 GMAIL_PASS = 'villanovagraduate'
 
-SUBJECT = 'Intrusion!!'
-TEXT = 'Your PIR sensor detected movement'
+SUBJECT = 'Intrusion Detected!!'
+TEXT = 'Someone is in your house. Make sure this is not an intrusion.'
   
 ser = serial.Serial('COM5', 9600)
 
