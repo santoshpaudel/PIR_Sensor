@@ -30,7 +30,6 @@ void loop() {
   
   else {
     digitalWrite(LED, LOW);
-    //digitalWrite(Buzzer, LOW);
   }
    delay(500);
 }
