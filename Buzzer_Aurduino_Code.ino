@@ -26,18 +26,12 @@ void loop() {
   //if its high or if an any object is detected it will activate the LED 
   if (value == HIGH){
     digitalWrite(LED, HIGH);
-    //digitalWrite(Buzzer, HIGH);
     siren();
     if (now > (lastSend + minSecsBetweenEmails * 1000l))
     {
       Serial.println("MOVEMENT");
       lastSend = now;
     }
-    
- 
-  
- 
-
   }
   
   else {
