@@ -1,8 +1,7 @@
 //define the pins
 int LED = 13;
 int PIR = 7;
-//int Buzzer = 7;
-int PIEZO_PIN=5;
+int Buzzer=5;
 int minSecsBetweenEmails = 60; // 1 min
 int toneFreq[] = { 150,   
                    326,   
@@ -15,7 +14,6 @@ long lastSend = -minSecsBetweenEmails * 1000l;
 void setup() {
   //define the LED and Buzzer pin as output
   pinMode(LED, OUTPUT);
-//  pinMode(Buzzer, OUTPUT);
   //define the sensor pin as input
   pinMode(PIR, INPUT);
   Serial.begin(9600);
@@ -44,19 +42,18 @@ void loop() {
   
   else {
     digitalWrite(LED, LOW);
-    //digitalWrite(Buzzer, LOW);
-    noTone(PIEZO_PIN);
+    noTone(Buzzer);
   }
    delay(500);
 }
 void siren(){
    for (int i=0; i < toneCount; ++i) {
-    tone(PIEZO_PIN, toneFreq[i]);
+    tone(Buzzer, toneFreq[i]);
     delay(500);  // Pause for half a second.
   }
   // Loop down through all the tones from finish to start again.
   for (int i=toneCount-1; i >= 0; --i) {
-    tone(PIEZO_PIN, toneFreq[i]);
+    tone(Buzzer, toneFreq[i]);
     delay(500);
   }
 }
